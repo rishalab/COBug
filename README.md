@@ -18,6 +18,14 @@ COBOL continues to power critical systems in financial, governmental, and enterp
 
 ---
 
+## Pipeline 
+
+Pipeline of COBug Tool 
+
+![Pipeline](./pipeline.png)
+
+---
+
 ## 🛠️ Tool Workflow
 
 1. **User Input**
