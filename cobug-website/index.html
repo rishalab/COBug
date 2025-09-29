@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>COBug - A Bug Localization Pipeline for COBOL Software Systems</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <!--                             <span aria-hidden="true" class="icon_documents_alt icon"></span> -->
+                            <span class="text-highlight"></span><span class="text-bold">COBug</span>
+                        </a>
+                    </h1>
+
+                </div>
+
+                <!-- <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+	            
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+			            
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+			            
+			        </form>
+                </div> -->
+
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <!-- <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: Nov 21st, 2020</div>
+                </div>//doc-header -->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h1 class="section-title">COBug - A Bug Localization Pipeline for COBOL Software Systems
+                                </h1>
+                                <br>
+                                <h3 class="block-title">Tool Description</h3>
+                                <div class="section-block">
+                                    <p>
+                                        COBOL continues to power critical systems in financial, governmental, and
+                                        enterprise applications. However, bug localization for COBOL systems has not
+                                        been addressed effectively in research. This tool is the first of its kind to
+                                        automatically identify buggy COBOL files given a natural language bug report,
+                                        offering a significant improvement to the maintenance of COBOL systems.
+                                    </p>
+                                    <!--                                     <p style="color: red;">
+                                        <u>Note</u>: The current version of eTagger may have issues on runnning on some architectures of Mac systems.  
+                                    </p> -->
+                                    <!--                                     <a href="https://github.com/rishalab/eTagger/archive/main.zip" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Tool Zip</a> -->
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation</h2>
+                                <div id="step1" class="section-block">
+                                    <h3 class="block-title" id="requirements">Requirements</h3>
+                                    <div class="code-block">
+                                        <p>
+                                        <ul>
+                                            <li>Install Python ≥ 3.9 (Recommended: 3.11) and pip ≥ 21.0</li>
+                                            <li>
+                                                Download and install Python from the
+                                                <a href="https://www.python.org/downloads/release/python-3110/">official
+                                                    site</a>.
+                                            </li>
+                                            <li>Ensure you check "Add Python to PATH" during installation.</li>
+                                            <li>Verify the installation by running <code>python --version</code> and
+                                                <code>pip --version</code> in your terminal or command prompt.</li>
+                                            <li>
+                                                <b>Obtain the Gemini 2.0 Flash API key for bug report generation:</b>
+                                                <ul>
+                                                    <li>Go to <a href="https://aistudio.google.com/app/apikey">Google AI
+                                                            Studio - API Key Management</a>.</li>
+                                                    <li>Sign in with your <strong>Google Account</strong>.</li>
+                                                    <li>Click <strong>Create API Key</strong> and select <strong>Gemini
+                                                            2.0</strong> as the model.</li>
+                                                    <li>Copy the generated <strong>API key</strong> and keep it safe.
+                                                    </li>
+                                                    <li>
+                                                        To verify your API access, run the following Python snippet:
+                                                        <div style="
+                                                              background-color: #1e1e1e;
+                                                              border-radius: 6px;
+                                                              overflow-x: auto;
+                                                              display: block;
+                                                              padding: 0;
+                                                              margin: 0;
+                                                              max-width: 100%;
+                                                            ">
+                                                            <pre style="
+                                                            margin: 0;
+                                                            padding: 8px 12px;
+                                                            font-family: monospace;
+                                                            font-size: 14px;
+                                                            line-height: 1.5;
+                                                            color: white;
+                                                            white-space: pre;
+                                                          "><code style="color: inherit;">import google.generativeai as genai
+genai.configure(api_key="YOUR_API_KEY")
+model = genai.GenerativeModel("models/gemini-2.0-flash")</code></pre>
+                                                        </div>
+                                                    </li>
+
+
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        </p>
+
+
+                                    </div>
+                                    <h3 class="block-title" id="from-github">From Github</h3>
+                                    <div class="code-block">
+
+                                        <p>STEP 1: Clone or download this GitHub repository:</p>
+                                        <p><code>git clone https://github.com/rishalab/COBug.git</code></p>
+
+                                        <p>STEP 2: Navigate into the COBug directory:</p>
+                                        <p><code>cd COBug</code></p>
+
+                                        <p>STEP 3: Install the requirements:</p>
+                                        <p><code>python -m pip install -r requirements.txt</code></p>
+
+                                        <p>STEP 4: Run the tool:</p>
+                                        <p><code>python main.py</code></p>
+
+                                        <p>After running, the tool will ask for the following inputs:</p>
+
+                                        <p>STEP 5: Provide the path to the COBOL repository you want to analyze, e.g.,
+                                        </p>
+                                        <p><code>path/to/cobol_repo</code></p>
+
+                                        <p>STEP 6: Enter your <b>API keys</b> for report generation when prompted.</p>
+
+                                        <p>STEP 7: To test the tool's prediction task, the user should provide the
+                                            following inputs when prompted:</p>
+                                        <ul>
+                                            <li><strong>Bug summary:</strong> Enter the summary of one bug ID.</li>
+                                            <li><strong>Bug description:</strong> Enter the detailed description of the
+                                                bug.</li>
+                                            <li><strong>Ground truth (optional):</strong>Provide the actual cbl path for
+                                                comparison purposes.</li>
+                                        </ul>
+
+                                        <p>After submitting these inputs, the tool will process the information and
+                                            display the results, showing the <strong>top 5 predicted COBOL
+                                                files</strong> that are most relevant to the bug report.</p>
+
+                                        <p>This allows users to quickly identify which COBOL files are likely related to
+                                            the bug, aiding in faster debugging and analysis.</p>
+
+
+                                    </div><!--//code-block-->
+                                    <h3 class="block-title" id="usage">Usage</h3>
+                                    <div class="code-block">
+                                        <p>COBug helps developers working with COBOL code quickly find where bugs are
+                                            likely hiding. Just give it your codebase, a brief summary and description
+                                            of the bug, and an API key—it will analyze everything and show you the top
+                                            files most likely causing the issue.</p>
+                                        <!-- <p>Ex: <a href="https://github.com/iNPUTmice/Conversations">iNPUTmice/Conversations</a></p> -->
+
+                                        <!-- <img src="assets/images/demo/isssues_tab.png" alt="issues tab"> -->
+                                    </div>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="icons-section" class="doc-section">
+                                <h2 class="section-title">Approach diagram</h2>
+                                <div class="section-block">
+                                    <p>
+                                        This diagram shows how COBug takes your bug report and COBOL code, processes
+                                        them step by step, and uses a machine learning model (Random Forest) to identify
+                                        which files are most likely responsible for the bug.
+                                    </p>
+                                    <img class="img-fluid" src="assets/images/demo/pipeline.png" alt="elegant icons" />
+                                    <br>
+                                    <div style="height: 20px;"></div>
+                            </section>
+
+                            <section id="uses-section" class="doc-section">
+                                <h2 class="section-title">Goal</h2>
+                                <div class="section-block">
+
+                                    Helping developers and maintainers quickly localize bugs in COBOL systems using
+                                    Google Generative AI LLM and machine learning.
+
+                                </div>
+
+                            </section>
+
+                            <section id="result-section" class="doc-section">
+                                <h2 class="section-title">Results</h2>
+                                <div class="section-block">
+                                    The evaluation experiments have been done on 3 systems of different configurations
+                                    considering 4 machine learning algorithms.
+                                    <strong><a
+                                            href="https://github.com/Rajrupa1998/RJoules/tree/main/Evaluation/">Results</a></strong>
+
+
+                                </div>
+
+                            </section>
+
+
+
+
+
+
+
+
+
+                            <section id="video-section" class="doc-section">
+                                <h2 class="section-title">Demo Video</h2>
+                                <div class="section-block">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+
+                                            <div class="embed-responsive embed-responsive-4by3">
+                                                <iframe width="560" height="315"
+                                                    src="https://www.youtube.com/R4W6-GoUHYE"
+                                                    title="YouTube video player" frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen></iframe>
+                                                
+                                            </div>
+                                            <div>The output file name has been updated as RJoules_output.csv</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </section>
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <!-- <a class="nav-link scrollto" href="#download-section">Download</a> -->
+                                <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                    <a class="nav-link scrollto" href="#requirements">Requirements</a>
+                                    <a class="nav-link scrollto" href="#from-github">From Github</a>
+                                    <a class="nav-link scrollto" href="#running-backend">Running the backend</a>
+                                    <a class="nav-link scrollto" href="#loading-extension">Loading the Chrome
+                                        extension</a>
+                                    <a class="nav-link scrollto" href="#usage">Usage</a>
+                                </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#icons-section">Approach</a>
+                                <a class="nav-link scrollto" href="#feature-section">Screenshots</a>
+                                <a class="nav-link scrollto" href="#uses-section">Goals</a>
+                                <!-- <a class="nav-link scrollto" href="#metric-section">Metrics</a> -->
+                                <a class="nav-link scrollto" href="#result-section">Results</a>
+                                <!-- <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#html">Parsing class</a>
+                                    </nav>//nav -->
+                                <!-- <a class="nav-link scrollto" href="#tables-section">Results</a> -->
+                                <a class="nav-link scrollto" href="#video-section">Demo Video</a>
+                            </nav><!--//doc-menu-->
+
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+        <div id="promo-block" class="promo-block">
+            <div class="container">
+                <div class="promo-block-inner">
+
+                    <!-- <h3 class="promo-title">Contributors</h3> -->
+                    <div class="content-holder col-lg-7 col-md-6 col-7">
+                        <div class="content-holder-inner">
+                            <div class="desc">
+                                <h3 class="promo-title">Contributors</h3>
+                                <p> Kavyasri Gajula,Phanindra Kodela, Sridhar Chimalakonda</p>
+                                <!-- <a class="btn btn-cta" href="" target="_blank"><i class="fas fa-external-link-alt"></i> Preprint</a> -->
+                            </div><!--//desc-->
+                        </div><!--//content-holder-inner-->
+                    </div><!--//content-holder-->
+
+                </div><!--//promo-block-inner-->
+            </div><!--//container-->
+        </div><!--//promo-block-->
+
+    </div><!--//page-wrapper-->
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
