@@ -1,4 +1,4 @@
-### RJoules - An Energy Measurement Tool for R Language
+### COBug - A Bug Localization Pipeline for COBOL Software Systems
 
 <!-- You can use the [editor on GitHub](https://github.com/tritims/eTagger/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -39,4 +39,4 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
  
  ## Tool Description
  
-RJoules measures the energy consumption of R code snippeton Intel processor and provides domain-level granular results. This tool can be serves as a valuable resource for developers and practitioners seeking to develop energy-aware applications using the R languaguage,
+COBOL continues to power critical systems in financial, governmental, and enterprise applications. However, bug localization for COBOL systems has not been addressed effectively in research. This tool is the first of its kind to automatically identify buggy COBOL files given a natural language bug report, offering a significant improvement to the maintenance of COBOL systems.
