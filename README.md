@@ -11,6 +11,10 @@ COBOL continues to power critical systems in financial, governmental, and enterp
 
 ---
 
+# Important Links
+1. [Demonstration Video](https://youtu.be/R4W6-GoUHYE)
+2. [Tool Website](https://rishalab.github.io/COBug/)
+
 ## 📂 Dataset
 
 - **X-COBOL Dataset**: [X-COBOL on HuggingFace](https://huggingface.co/datasets/Trivandrum/x-cobol)
