@@ -37,7 +37,7 @@ COBug is a bug localization pipeline designed specifically for **COBOL**, a lega
     Place your COBOL code repositories (X-COBOL corpus) in the X-COBOL_files/ directory.
 ---
 
-### **3.Visualizations (Pipeline Diagrams)**
+### **3. Visualizations (Pipeline Diagrams)**
 Pipeline of COBug Tool 
 
 ![Pipeline](./pipeline.png)
@@ -48,7 +48,7 @@ Static Bug Injection → Runtime Bug Injection → CSV Creation → Localization
 
 ---
 
-### **4.Bug Injection Process**
+### **4. Bug Injection Process**
 1. **Static Bug Injection**:
 Step-1
 Execute:
@@ -107,7 +107,7 @@ Runtime bug logs: runtime_bug_injector_logs.csv.
 
 ---
 
-### **5.CSV Creation for Bug Reports**
+### **5. CSV Creation for Bug Reports**
 Step-3
 Execute:
    
@@ -129,7 +129,7 @@ bug_file_pairs.csv: Contains the relationship between the injected bugs and file
 
 ---
 
-### **6.COBug Localization Pipeline**
+### **6. COBug Localization Pipeline**
 Step-4
 Execute:
 
@@ -166,7 +166,7 @@ metrics_summary.csv: Summarizes evaluation metrics like Top-K accuracy, MAP, and
 
 ---
 
-### **7.Manual Checking**
+### **7. Manual Checking**
 Step-5
 Execute:
 
@@ -183,7 +183,8 @@ Output:
 
 manual_audit_results.csv: Contains logs of the manual checks for each injected bug.
 
-### **Evaluation and Results**
+---
+### **8. Evaluation and Results**
 Step-6
 Execute:
 
@@ -208,13 +209,15 @@ model_rankings.csv: Ranking of models based on their evaluation metrics.
 
 final_observations.txt: Contains final observations and conclusions from the analysis.
 
-### **Analyzing the Results**
+---
+### **9. Analyzing the Results**
 Runtime Bug Results:
 After running the evaluation, the runtime bug results for each of the models (Qwen2.5-Coder, CodeLLaMA, DeepSeek-Coder) are stored in the tables/ folder.
 
 These results are summarized in CSV files (e.g., results_qwen.csv, results_codellama.csv, results_deepseek.csv), detailing the performance metrics like Top-K accuracy, MAP, and MRR.
 
-### **Final Observations and Future Work**
+---
+### **10. Final Observations and Future Work**
 **Conclusion**:
 COBug establishes a first empirical baseline for COBOL bug localization.
 
@@ -232,6 +235,8 @@ COBOL-aware models that understand COBOL’s unique syntax and structure.
 Hybrid approaches that combine IR and ML based on bug report characteristics.
 
 Pretraining LLMs for COBOL to better understand its structure.
+
+---
 
 **Final Remarks**:
 This README provides a comprehensive guide to COBug, explaining all aspects of bug injection, the pipeline, and evaluation. It is structured to give reviewers a clear understanding of the process, with all relevant file names and output files.
