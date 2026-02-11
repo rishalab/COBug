@@ -1,0 +1,53 @@
+$set sourceformat"free"
+       program-id. ProgramaPrincipal.
+      *>=================================================================================
+      *>    
+      *>                      Gerenciador de Chamadas do Projeto
+      *>
+      *>=================================================================================
+       environment division.
+       configuration section.
+            special-names. decimal-point is comma.      
+
+
+      *>=================================================================================
+       data division.      
+      
+      *>=================================================================================      
+       working-storage section.
+       
+       01  WS-FLAG PIC X VALUE 'N'.
+
+       78   c-versao                                value "a".
+       78   c-este-programa                         value "ProgramaPrincipal".
+       78   c-frame-principal                       value "CS00000S".
+       78   c-controle-assincrono                   value "CS00001S".
+       
+       
+       01   ws-campos-trabalho.
+            03 ws-linha-commando                    pic x(500)  value spaces.
+
+       copy CSL00900.cpy.     
+                 
+                                                                          
+      *>=================================================================================
+       procedure division.
+       
+       DISPLAY UNDECLARED-VAR.
+
+       IF WS-FLAG = 'Y'
+           DISPLAY "FLAG-SET".
+       END-IF.
+
+      *>=================================================================================
+
+       0000-controle section.
+            perform 1000-inicializacao
+            perform 2000-processamento
+            perform 3000-finalizacao.
+       0000-saida.    
+            exit program
+            stop run
+       *> RUNTIME_BUG_START TYPE=INFINITE_LOOP_NON_TERMINATION
+       go to 0000-controle.
+       *> RUNTIME_BUG_END TYPE=INFINITE_LOOP_NON_TERMINATION

@@ -1,0 +1,19 @@
+IDENTIFICATION DIVISION.
+       PROGRAM-ID.   CBU00008.
+       ENVIRONMENT    DIVISION.
+       CONFIGURATION  SECTION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+        01 j PIC 9(2).
+        01 nb-test-size PIC 9(2) VALUE 0. *> RUNTIME_BUG_START TYPE=UNINITIALIZED_DATA_ITEM_USE
+        01 index-current-suite PIC 9(2).
+       COPY CBUC0002.
+       LINKAGE SECTION.
+        COPY CBUC0001.
+       PROCEDURE DIVISION USING CBU-ctx.
+        PERFORM VARYING j FROM 1 BY 1
+                        UNTIL j>nb-test-size(index-current-suite) *> RUNTIME_BUG_END TYPE=UNINITIALIZED_DATA_ITEM_USE
+                CALL CBU-test-run USING CBU-ctx j.
+       END-PERFORM
+        EXIT PROGRAM.
+       END PROGRAM CBU00008.
