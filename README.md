@@ -37,7 +37,7 @@ COBug is a bug localization pipeline designed specifically for **COBOL**, a lega
     Place your COBOL code repositories (X-COBOL corpus) in the X-COBOL_files/ directory.
 ---
 
-### **Visualizations (Pipeline Diagrams)**
+### **3.Visualizations (Pipeline Diagrams)**
 Pipeline of COBug Tool 
 
 ![Pipeline](./pipeline.png)
@@ -48,7 +48,7 @@ Static Bug Injection → Runtime Bug Injection → CSV Creation → Localization
 
 ---
 
-### **Bug Injection Process**
+### **4.Bug Injection Process**
 1. **Static Bug Injection**:
 Step-1
 Execute:
@@ -107,7 +107,7 @@ Runtime bug logs: runtime_bug_injector_logs.csv.
 
 ---
 
-### **CSV Creation for Bug Reports**
+### **5.CSV Creation for Bug Reports**
 Step-3
 Execute:
    
@@ -127,7 +127,9 @@ gt_labels.csv: Maps bug IDs to the faulty file paths (ground truth).
 
 bug_file_pairs.csv: Contains the relationship between the injected bugs and files.
 
-### **COBug Localization Pipeline**
+---
+
+### **6.COBug Localization Pipeline**
 Step-4
 Execute:
 
@@ -162,7 +164,9 @@ evaluation_results.csv: Ranking results of the files for each bug.
 
 metrics_summary.csv: Summarizes evaluation metrics like Top-K accuracy, MAP, and MRR for each model.
 
-### **Manual Checking**
+---
+
+### **7.Manual Checking**
 Step-5
 Execute:
 
