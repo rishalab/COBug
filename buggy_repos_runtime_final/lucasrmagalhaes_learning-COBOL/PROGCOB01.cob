@@ -1,0 +1,31 @@
+IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROGCOB01.
+      *****************************************
+      * AREA DE COMENTARIOS - REMARKS
+      * AUTHOR = LUCAS  LRM
+      * DATA   = XX/XX/XXXX
+      * OBJETIVO: MOSTRAR A STRING HELLO ALURA
+      *****************************************
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-COUNTER PIC 9(2) VALUE 0.
+
+       PROCEDURE DIVISION.
+       *> RUNTIME_BUG_START TYPE=INFINITE_LOOP_NON_TERMINATION
+       PERFORM UNTIL WS-COUNTER > 10
+           DISPLAY "LOOPING FOREVER".
+           ADD 1 TO WS-COUNTER.
+       END-PERFORM.
+       *> RUNTIME_BUG_END TYPE=INFINITE_LOOP_NON_TERMINATION
+
+       GO TO ERR-HANDLER.
+
+       DISPLAY "NORMAL-FLOW".
+
+       ERR-HANDLER.
+           DISPLAY "ERROR-HANDLED".
+           EXIT.
+
+          DISPLAY 'HELLO ALURA'.
+          STOP RUN.
