@@ -1,0 +1,23 @@
+IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROGCOB01.
+      *****************************************
+      * AREA DE COMENTARIOS - REMARKS
+      * AUTHOR = LUCAS  LRM
+      * DATA   = XX/XX/XXXX
+      * OBJETIVO: MOSTRAR A STRING HELLO ALURA
+      *****************************************
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       PROCEDURE DIVISION.
+       GO TO ERR-HANDLER.
+
+       DISPLAY "NORMAL-FLOW".
+
+       *> RUNTIME_BUG_START TYPE=INFINITE_LOOP_NON_TERMINATION
+       ERR-HANDLER.
+           DISPLAY "ERROR-HANDLED".
+           EXIT.
+
+          DISPLAY 'HELLO ALURA'.
+          STOP RUN.
+       *> RUNTIME_BUG_END TYPE=INFINITE_LOOP_NON_TERMINATION
