@@ -1,0 +1,4 @@
+seed,metric,model_a,model_b,n_pairs,statistic,p_value,significant_0.05
+0,MAP,IR,IR+LR,14,11.0,0.015906444101703374,1
+0,MAP,IR,IR+RF,14,10.0,0.013103614110038467,1
+0,MAP,IR+LR,IR+RF,14,10.0,0.013103614110038467,1
