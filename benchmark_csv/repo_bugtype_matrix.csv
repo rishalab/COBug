@@ -1,0 +1,14 @@
+repo_id,DEAD_CODE_AFTER_STOP_RUN,DIVIDE_BY_ZERO_RISK,INFINITE_LOOP_NON_TERMINATION,MISSING_ELSE_FOR_CRITICAL_CHECK,MISSING_FILE_STATUS_HANDLING,REDUNDANT_GOTO,UNDECLARED_IDENTIFIER_REFERENCE,UNINITIALIZED_DATA_ITEM_USE,UNUSED_DATA_ITEM,WRONG_CALCULATION_LOGIC
+GaloisGirl_Coding,11,5,5,11,7,14,8,11,16,5
+IBM_example-health-apis,0,5,4,14,4,9,14,4,8,5
+Martinfx_Cobol,0,3,4,11,4,7,9,4,11,2
+abrignoli_COBSOFT,1,1,5,3,4,1,1,4,41,7
+bhbandam_AZ-Legacy-Engineering,0,3,1,9,1,7,7,0,9,4
+bmcsoftware_vscode-ispw,0,6,5,0,5,0,0,9,11,7
+debinix_openjensen,0,3,4,6,6,6,9,3,19,6
+gbeine_COBOLUnit,0,5,11,0,7,0,0,11,0,9
+lucasrmagalhaes_learning-COBOL,10,4,11,12,6,7,15,8,14,10
+neopragma_cobol-unit-test,0,6,5,10,4,11,7,2,10,4
+seanpm2001_SNU_2D_ProgrammingTools_IDE_COBOL,1,0,0,0,2,2,1,1,0,0
+ve3wwg_cobcurses,4,2,10,14,8,10,10,7,39,8
+z390development_z390,20,6,9,16,9,19,17,5,30,7
