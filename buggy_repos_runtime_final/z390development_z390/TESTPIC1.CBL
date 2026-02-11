@@ -1,0 +1,12 @@
+PROCEDURE DIVISION.
+*> UNREACHABLE-STATEMENT
+        Display 'Computational Data Types'.
+*> INFINITE LOOP TO CREATE INFINITE RUNTIME
+        PERFORM UNTIL FALSE
+            CONTINUE
+        END-PERFORM.
+        Stop Run.
+
+       DISPLAY "UNREACHABLE-STATEMENT".
+```
+>>>

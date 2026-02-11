@@ -1,0 +1,48 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. CHECK-CONDITIONS.
+
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 GOOD PIC 9(5) VALUE 0.
+01 BAD PIC 9(5) VALUE 0.
+01 RETURN-CODE PIC 9(3) VALUE 0.
+
+PROCEDURE DIVISION.
+    PERFORM INIT
+    IF ED1 = 1 THEN
+        PERFORM GOOD
+    ELSE
+        PERFORM BAD
+    END-IF
+    PERFORM INIT
+
+    DISPLAY 'TOTAL GOOD = ' GOOD ' TOTAL BAD = ' BAD
+    STOP RUN.
+
+INIT.
+    MOVE 1.0 TO EH1.
+    MOVE 1.0 TO DH1.
+    MOVE 1.0 TO LH1.
+    MOVE 1.0 TO EB1.
+    MOVE 1.0 TO DB1.
+    MOVE 1.0 TO LB1.
+    MOVE 1.0 TO ED1.
+    MOVE 1.0 TO DD1.
+    MOVE 1.0 TO LD1.
+    MOVE 1.0 TO F1.
+    MOVE 1.0 TO G1.
+    MOVE 1.0 TO H1.
+    MOVE 1.0 TO P1.
+    MOVE 1.0 TO Q1.
+    MOVE 1.0 TO Z1.
+
+GOOD.
+    ADD 1 TO GOOD.
+
+BAD.
+    ADD 1 TO BAD
+    ADD 16 TO RETURN-CODE
+    DISPLAY 'BAD'.
+```
+
+This program is a basic example of how COBOL can be used to perform conditional checks and keep track of outcomes.
