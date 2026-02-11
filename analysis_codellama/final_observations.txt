@@ -1,0 +1,19 @@
+FINAL OBSERVATIONS (STEP-5)
+=====================================
+
+Best performing model: IR
+
+Mean MAP across seeds:
+  IR: 0.1482 ± 0.0000
+  IR+LR: 0.1459 ± 0.0000
+  IR+RF: 0.1242 ± 0.0000
+
+Repo-wise win counts:
+  IR: 7 wins
+  IR+LR: 4 wins
+  IR+RF: 3 wins
+
+Wilcoxon signed-rank test (MAP):
+  Seed 0: IR vs IR+LR | p=0.0995 | significant=False
+  Seed 0: IR vs IR+RF | p=0.0392 | significant=True
+  Seed 0: IR+LR vs IR+RF | p=0.0640 | significant=False

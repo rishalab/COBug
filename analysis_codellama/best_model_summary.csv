@@ -1,0 +1,4 @@
+criterion,value
+best_model_by_mean_map,IR
+best_mean_map,0.1482050009071827
+std_map,0.0
