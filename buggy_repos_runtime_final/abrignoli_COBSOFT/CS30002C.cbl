@@ -1,0 +1,65 @@
+$set sourceformat"free"
+       program-id. CS30002C.
+      *>=================================================================================
+      *>    
+      *>                          Gerenciador de RelatÃ³rios
+      *>
+      *>=================================================================================
+       environment division.
+       configuration section.
+            special-names. decimal-point is comma.      
+
+
+      *>=================================================================================
+       data division.      
+      
+      *>=================================================================================      
+       working-storage section.
+       
+       01  UNUSED-VAR PIC X(10) VALUE SPACES.
+
+       78   c-versao                                value "a".
+       78   c-emissao-nfe                           value "CS30003C".
+
+      *>=================================================================================
+       linkage section.
+                 
+       copy CSL00900.cpy.
+                                                                          
+      *>=================================================================================
+       procedure division using lnk-par.
+       
+      *>=================================================================================
+
+       0000-controle section.
+            perform 1000-inicializacao
+            perform 2000-processamento
+            perform 3000-finalizacao.
+       0000-saida.    
+            exit program
+            stop run
+       exit.
+       
+      *>=================================================================================
+       1000-inicializacao section.
+
+            call c-emissao-nfe using lnk-par
+            cancel c-emissao-nfe
+       
+       
+       exit.
+        
+      *>=================================================================================
+       2000-processamento section.
+       
+       
+       exit.
+
+      *>=================================================================================
+       3000-finalizacao section.
+       
+       *> RUNTIME_BUG_START TYPE=UNINITIALIZED_DATA_ITEM_USE
+       display uninitialized-var.
+       *> RUNTIME_BUG_END TYPE=UNINITIALIZED_DATA_ITEM_USE
+       
+       exit.
