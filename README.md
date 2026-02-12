@@ -215,7 +215,7 @@ final_observations.txt: Contains final observations and conclusions from the ana
 ---
 ### **9. Analyzing the Results**
 Runtime Bug Results:
-After running the evaluation, the runtime bug results for each of the models (Qwen2.5-Coder, CodeLLaMA, DeepSeek-Coder) are stored in the tables/ folder.
+After running the evaluation, the runtime bug results for each of the models (Qwen2.5-Coder, CodeLLaMA, DeepSeek-Coder) are stored in the Tables/ folder.
 
 These results are summarized in CSV files (e.g., results_qwen.csv, results_codellama.csv, results_deepseek.csv), detailing the performance metrics like Top-K accuracy, MAP, and MRR.
 
