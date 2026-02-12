@@ -38,13 +38,16 @@ COBug is a bug localization pipeline designed specifically for **COBOL**, a lega
 ---
 
 ### **3. Visualizations (Pipeline Diagrams)**
+Dataset Creation 
+![Dataset](./Ease_DatasetCreation.png)
+
 Pipeline of COBug Tool 
 
-![Pipeline](./pipeline.png)
+![Pipeline](./Ease_Pipeline.png)
 Explanation: The pipeline involves several steps, from bug injection to evaluation. The main flow is:
 
 Static Bug Injection → Runtime Bug Injection → CSV Creation → Localization Pipeline → Evaluation → Results Analysis
-(Place diagrams here, explaining each step visually.)
+
 
 ---
 
