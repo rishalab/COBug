@@ -46,7 +46,7 @@ Pipeline of COBug Tool
 ![Pipeline](./Ease_Pipeline.png)
 Explanation: The pipeline involves several steps, from bug injection to evaluation. The main flow is:
 
-Static Bug Injection → Runtime Bug Injection → CSV Creation → Localization Pipeline → Evaluation → Results Analysis
+Static Bug Injection → Runtime Bug Injection → Bug file pairs and Bug Reports Creation → Localization Pipeline → Evaluation → Results Analysis
 
 
 ---
